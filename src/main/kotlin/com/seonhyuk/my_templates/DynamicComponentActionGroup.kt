@@ -7,7 +7,7 @@ class DynamicComponentActionGroup : DefaultActionGroup() {
     override fun getChildren(event: AnActionEvent?): Array<AnAction> {
         val project = event?.project ?: return emptyArray()
         val basePath = project.basePath ?: return emptyArray()
-        val targetFolder = VirtualFileManager.getInstance().findFileByUrl("file://$basePath/templates") ?: return emptyArray()
+        val targetFolder = VirtualFileManager.getInstance().findFileByUrl("file://$basePath/my_templates") ?: return emptyArray()
 
         val actions = mutableListOf<AnAction>()
         for (subFolder in targetFolder.children.filter { it.isDirectory }) {

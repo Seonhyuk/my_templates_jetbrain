@@ -16,7 +16,9 @@
     </description>
     <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij" />
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType implementationClass="com.seonhyuk.my_templates.CustomFileType" name="template" extensions="myt" />
+    </extensions>
 
     <actions>
         <action id="com.seonhyuk.my_templates.DynamicComponentActionGroup"

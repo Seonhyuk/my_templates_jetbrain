@@ -1,5 +1,6 @@
 package com.seonhyuk.my_templates
 
+import ai.grazie.utils.capitalize
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
@@ -40,10 +41,14 @@ class CreateFilesAction(folderName: String, private val folder: VirtualFile) : A
 
     private fun createFilesFromTemplates(templateFolder: VirtualFile, targetFolder: VirtualFile, input: String) {
         for (file in templateFolder.children.filter { !it.isDirectory }) {
-            val newFileName = file.name.replace("__NAME__", input)
+            var newFileName = file.name.replace("{name}", input)
+
+            if (newFileName.endsWith(".myt")) {
+                newFileName = newFileName.removeSuffix(".myt")
+            }
             val newFile = targetFolder.createChildData(this, newFileName)
 
-            val fileContent = VfsUtil.loadText(file).replace("__NAME__", input)
+            val fileContent = VfsUtil.loadText(file).replace("{name}", input).replace("{Name}", input.capitalize())
             VfsUtil.saveText(newFile, fileContent)
         }
     }
