@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "my_templates_jetbrain"
+rootProject.name = "my_templates"
