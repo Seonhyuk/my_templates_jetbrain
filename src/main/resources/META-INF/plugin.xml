@@ -5,14 +5,29 @@
     <vendor email="seonhyuk16@gmail.com" url="https://github.com/Seonhyuk">Seonhyuk</vendor>
     <description>
         <![CDATA[
-            This plugin allows you to create multiple files at once based on a template.
-            <br />
-            <br />
-            While developing the frontend, I found it quite tedious to repeatedly create index, types, style, and component files every time I built a new component. After doing the same task dozens of times, I realized it would be easier to create a plugin to handle it for me.
-            <br />
-            <br />
-            I’m always open to feedback and suggestions!
-        ]]>
+        This plugin allows you to create multiple files at once based on a template.
+        <br />
+        <br />
+        While developing the frontend, I found it quite tedious to repeatedly create index, types, style, and component files every time I built a new component. After doing the same task dozens of times, I realized it would be easier to create a plugin to handle it for me.
+        <br />
+        <br />
+        <b>Overview:</b>
+        <br />
+        The <i>My Templates</i> plugin enhances your development workflow by allowing you to manage and apply custom templates to specific file types. With this plugin, you can easily define and manage templates, and automatically apply them to new files with specific extensions.
+        <br />
+        <br />
+        <b>Features:</b>
+        <ul>
+            <li>Create and manage custom templates within the /my_templates directory.</li>
+            <li>Automatically apply templates to new files based on predefined extensions.</li>
+            <li>Files with the .myt extension are treated as plain text files.</li>
+        </ul>
+        <br />
+        I’m always open to feedback and suggestions!
+        <br />
+        <br />
+        For more details, visit my <a href="https://github.com/Seonhyuk/my_templates_jetbrain">GitHub</a>.
+    ]]>
     </description>
     <depends>com.intellij.modules.platform</depends>
 
